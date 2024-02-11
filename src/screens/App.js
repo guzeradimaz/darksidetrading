@@ -133,30 +133,32 @@ export const App = () => {
   return (
     <div className='root'>
       <div className='mainScreen'>
-        <div className='topBar'>
-          <div className='logo' />
-          <nav>
-            <li><a href='#modules'>Модули</a></li>
-            <li><a href='#faq'>FAQ</a></li>
-          </nav>
-        </div>
-        <div className='brickWords'>
-          <p className='firstWord'>В</p>
-          <div>
-            <p className='secondWord'>ДЕТАЛИ</p>
-            <p className='secondWord'>ПРОСТОТЕ</p>
+        <div className='mainScreenWrapper'>
+          <div className='topBar'>
+            <div className='logo' />
+            <nav>
+              <li><a href='#modules'>Модули</a></li>
+              <li><a href='#faq'>FAQ</a></li>
+            </nav>
           </div>
-        </div>
-        <div className='buttonBuy'>
-          <a href='#anchor'><button>Забронировать место</button></a>
-          <div className='buttonBuyCol'>
-            <p>
-              Помни, Трейдинг - это Трудный путь. Прогрессируй, эволюционируй
-            </p>
-            <p>
-              В КАЖДОЙ СДЕЛКЕ - УРОК,
-              <br />В КАЖДОМ ГРАФИКЕ - ФИЛОСОФИЯ РЫНКА И ПУЛЬС МИРА
-            </p>
+          <div className='brickWords'>
+            <p className='firstWord'>В</p>
+            <div>
+              <p className='secondWord'>ДЕТАЛИ</p>
+              <p className='secondWord'>ПРОСТОТЕ</p>
+            </div>
+          </div>
+          <div className='buttonBuy'>
+            <a href='#anchor'><button>Забронировать место</button></a>
+            <div className='buttonBuyCol'>
+              <p>
+                Помни, Трейдинг - это Трудный путь. Прогрессируй, эволюционируй
+              </p>
+              <p>
+                В КАЖДОЙ СДЕЛКЕ - УРОК,
+                <br />В КАЖДОМ ГРАФИКЕ - ФИЛОСОФИЯ РЫНКА И ПУЛЬС МИРА
+              </p>
+            </div>
           </div>
         </div>
       </div>
