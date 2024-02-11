@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { assets } from '../assets';
 import './index.css';
 import Faq from 'react-faq-component';
 import './media.css'
@@ -160,15 +159,6 @@ export const App = () => {
             </p>
           </div>
         </div>
-        <video
-          className='videoTag'
-          style={{ height: '100%', width: '100%', objectFit: 'cover' }}
-          autoPlay
-          loop
-          muted
-        >
-          <source src={assets.background} type='video/mp4' />
-        </video>
       </div>
       <div className='secondBlock'>
         <div className='textInner'>
@@ -262,15 +252,6 @@ export const App = () => {
         </div>
       </div>
       <div className='sixBlock'>
-        <video
-          className='videoTag'
-          style={{ height: '100%', width: '100%', objectFit: 'cover' }}
-          autoPlay
-          loop
-          muted
-        >
-          <source src={assets.backVideoRain} type='video/mp4' />
-        </video>
         <div className='sixBlockWrapper'>
           <div className='moduleList'>
             <div className='moduleItem'>
@@ -391,7 +372,7 @@ const FAQ = () => {
         content: `Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncus nunc, ac sagittis leo elit vel lorem.`,
       },
       {
-        title: 'После истечении Обучения, доступ к материалам открыт ?',
+        title: 'После истечении Обучения, доступ к материалам открыт?',
         content: `Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncus nunc, ac sagittis leo elit vel lorem.`,
       },
     ],

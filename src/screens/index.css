@@ -7,6 +7,9 @@
   top: 60px;
 }
 .mainScreen {
+  background-image: url('../assets/darkside.gif');
+  background-position: center;
+  background-size: cover;
   width: 100vw;
   height: 100vh;
   background-color: #0000006f;
@@ -240,12 +243,14 @@
 .fouthBlock h1 {
   text-transform: uppercase;
   font-size: 36px;
+  text-align: center;
   letter-spacing: 1px;
 }
 .fouthBlock p {
   font-size: 24px;
   margin-top: 20px;
   text-transform: uppercase;
+  text-align: center;
 }
 .fifthBlock {
   width: 100vw;
@@ -321,13 +326,9 @@
   width: 100vw;
   height: 100vh;
   color: #fff;
-  position: relative;
-}
-.sixBlock .videoTag {
-  width: 100% !important;
-  height: 100% !important;
-  top: 0;
-  left: 0;
+  background-image: url('../assets/rain.gif');
+  background-position: center;
+  background-size: cover;
 }
 .sixBlockWrapper {
   display: flex;
@@ -508,4 +509,7 @@ a {
 }
 html {
   scroll-behavior: smooth;
+}
+::placeholder {
+  color: rgb(0, 0, 0);
 }

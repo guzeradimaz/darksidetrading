@@ -17,6 +17,7 @@
   }
   .buttonBuy p {
     padding-left: 0;
+    font-size: 18px;
   }
   .textInner {
     flex-direction: column;
@@ -65,15 +66,13 @@
     width: 100%;
   }
   .sixBlockWrapper{
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 2%;
+    padding-right: 2%;
     flex-direction: column-reverse;
   }
   .moduleItem{
-    width: 150px;
+    width: 145px;
     height: 150px;
-    max-height: 150px;
-    max-width: 150px;
   }
   .sixBlock{
     height: 130vh;
@@ -91,13 +90,14 @@
     align-items: center;
   }
   .sevenBlock ul{
-    padding-left: 5%;
     align-items: flex-start;
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding: 5% 5%;
   }
   .sevenBlock h1 {
+    font-size: 36px;
     padding-right: 5%;
   }
   .buttonBuyCol{
@@ -126,6 +126,9 @@
     width: 100%;
     flex-direction: column;
   }
+  .footerInfo p{
+    text-align: center;
+  }
   .footerInfo ul{
     display: flex;
     align-items: center;
@@ -134,5 +137,94 @@
   }
   footer{
     height: 200px;
+  }
+  footer p{
+    text-align: center;
+  }
+  .sevenBlock input {
+    border-radius: 0px;
+  }
+  .faq{
+    padding: 0% 5%;
+  }
+}
+@media screen and (max-width: 320px){
+
+  .textInnerMainInfo h1{
+    font-size: 24px;
+  }
+  .textInnerMainInfo li{
+    font-size: 16px;
+  }
+  .textInnerAddInfo p{
+    font-size: 16px;
+  }
+  .textInnerLastInfo p{
+    font-size: 16px;
+  }
+  .programmBlock p {
+    font-size: 24px;
+  }
+  .listBlock p{
+    font-size: 16px;
+  }
+  .Module{
+    width: 200px;
+    height: 200px;
+    max-width: 200px;
+    max-height: 200px;
+    min-width: 200px;
+    min-height: 200px;
+  }
+  .Module p{
+    font-size: 12px !important;
+  }
+  .Module h1{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .thirdBlock{
+    height: 125vh;
+  }
+  .fouthBlock h1{
+    font-size: 24px;
+  }
+  .fouthBlock p{
+    font-size: 18px;
+  }
+  .fifthBlockWrapper h1{
+    font-size: 18px;
+  }
+  .fifthBlockWrapper li{
+    font-size: 16px;
+  }
+  .moduleItem{
+    margin: 5px;
+    width: 130px;
+    max-width: 130px;
+    height: 130px;
+    max-height: 130px;
+  }
+  .moduleItem h1{
+    font-size: 18px;
+  }
+  .moduleItem p{
+    font-size: 14px;
+  }
+  .sixBlock{
+    height: 100vh;
+  }
+  .sevenBlock h1{
+    font-size: 18px;
+  }
+  .titlesix{
+    font-size: 18px;
+  }
+  .sevenBlock ul{
+    padding: 0% 5%;
+  }
+  .form li{
+    font-size: 16px;
   }
 }
