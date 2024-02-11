@@ -1,0 +1,137 @@
+@media screen and (max-width: 425px){
+  .firstWord{
+    font-size: 64px;
+  }
+  .secondWord{
+    font-size: 24px;
+  }
+  .buttonBuy{
+    flex-direction: column-reverse;
+    width: 100%;
+    align-items: flex-start;
+
+  }
+  .buttonBuy button {
+    width: 70%;
+    margin-top: 5%;
+  }
+  .buttonBuy p {
+    padding-left: 0;
+  }
+  .textInner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .textInnerAddInfo{
+    width: 100%;
+    margin-top: 5%;
+    text-align: center;
+  }
+  .textInnerLastInfo {
+    margin-top: 10%;
+  }
+  .textInnerLastInfo p {
+    font-size: 24px;
+  }
+  .thirdBlock{
+    padding-left: 5%;
+    height: 135vh;
+  }
+  .blockWrapper{
+    flex-direction: column;
+  }
+  .programmBlock {
+    width: 100%;
+  }
+  .listBlock{
+    width: 90%;
+  }
+  .fouthBlock h1{
+    text-align: center;
+  }
+  .fifthBlockWrapper {
+    padding-left: 5%;
+    padding-right: 5%;
+    flex-direction: column;
+  }
+  .fifthBlockWrapperText{
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .fifthBlockWrapper button {
+    width: 100%;
+  }
+  .sixBlockWrapper{
+    padding-left: 5%;
+    padding-right: 5%;
+    flex-direction: column-reverse;
+  }
+  .moduleItem{
+    width: 150px;
+    height: 150px;
+    max-height: 150px;
+    max-width: 150px;
+  }
+  .sixBlock{
+    height: 130vh;
+  }
+  .sevenBlock{
+    padding: 0 5%;
+    flex-direction: column;
+    height: 80vh;
+  }
+  .sevenBlock form{
+    width: 100%;
+  }
+  .sevenBlock .form{
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .sevenBlock ul{
+    padding-left: 5%;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .sevenBlock h1 {
+    padding-right: 5%;
+  }
+  .buttonBuyCol{
+    width: 90%;
+  }
+  .buttonBuy{
+    margin: 0;
+    padding-left: 5%;
+  }
+  .brickWords{
+    margin-left: 5%;
+    height: 40%;
+  }
+  .textInnerLastInfo p{
+    padding: 0 5%;
+  }
+  .fouthBlock{
+    padding: 0 5%;
+  }
+  .fifthBlock{
+    background-size: cover;
+    padding-bottom: 5%;
+  }
+  .footerInfo{
+    width: 100%;
+    flex-direction: column;
+  }
+  .footerInfo ul{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+  }
+  footer{
+    height: 200px;
+  }
+}
