@@ -432,7 +432,7 @@ li {
 }
 .faq {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #000;
   display: flex;
   flex-direction: row;
@@ -514,4 +514,9 @@ html {
 }
 ::placeholder {
   color: rgb(0, 0, 0);
+}
+.css-1wnsr1i{
+  border: none !important;
+  border-radius: 15px !important;
+  background-color: #ffc11e !important;
 }

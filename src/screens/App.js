@@ -2,8 +2,58 @@ import React, { useState } from 'react';
 import './index.css';
 import Faq from 'react-faq-component';
 import './media.css'
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
+
+const stylesModal = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+};
 
 export const App = () => {
+  const baseUrl = 'https://api.telegram.org/bot6810930652:AAE-Ib0Fa_lOVPwKQi71mOkYdk3g_MNs41g/';
+  const [inputValue, setInputValue] = useState('');
+  const [inputValue2, setInputValue2] = useState('');
+
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+  const [open2, setOpen2] = React.useState(false);
+  const handleOpen2 = () => setOpen2(true);
+  const handleClose2 = () => setOpen2(false);
+
+  const handleChange = (event) => {
+    setInputValue(event.target.value);
+  }
+  const handleChange2 = (event) => {
+    setInputValue2(event.target.value);
+  };
+  const sendMessage = async (message) => {
+    const url = `${baseUrl}sendMessage?chat_id=-4114922867&text=${message}`
+    const res = await fetch(url)
+    if (res.ok) {
+      handleOpen2()
+    }
+  }
+  const onSubmit = (event) => {
+    event.preventDefault();
+    if (inputValue.length === 0 || inputValue2.length === 0) {
+      handleOpen()
+      return null;
+    }
+    const confirmString = `Имя: ${inputValue}, Телеграм: ${inputValue2}`
+    sendMessage(confirmString)
+  }
   const modules = [
     {
       id: '12414sdgsdg',
@@ -132,6 +182,37 @@ export const App = () => {
   ];
   return (
     <div className='root'>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={stylesModal}>
+          <Typography id="modal-modal-title" variant="h6" component="h2">
+            Проверьте поля ввода!
+          </Typography>
+          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+            Они не должны быть пустыми!
+          </Typography>
+        </Box>
+      </Modal>
+
+      <Modal
+        open={open2}
+        onClose={handleClose2}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={stylesModal}>
+          <Typography id="modal-modal-title" variant="h6" component="h2">
+            Спасибо!
+          </Typography>
+          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+            Сообщение успешно отправлено!<br />В ближайшее время с вами свяжутся!
+          </Typography>
+        </Box>
+      </Modal>
       <div className='mainScreen'>
         <div className='mainScreenWrapper'>
           <div className='topBar'>
@@ -188,7 +269,7 @@ export const App = () => {
           </div>
         </div>
         <div className='textInnerLastInfo'>
-          <p>Помни, что трейдинг - это самые трудные легкие деньги!</p>
+          <p>Помни что Трейдинг это Риск<br />Риск Вознаграждается</p>
         </div>
       </div>
       <div className='thirdBlock' id='modules'>
@@ -302,13 +383,13 @@ export const App = () => {
           </h1>
           <h1>699$</h1>
         </div>
-        <form>
+        <form onSubmit={onSubmit}>
           <h1 style={{ color: '#000' }}>Полный курс обучения</h1>
           <div className='form'>
             <div>
-              <input placeholder='Имя' />
-              <input placeholder='Теlegram' />
-              <button>Забронировать место</button>
+              <input value={inputValue} onChange={handleChange} placeholder='Имя' />
+              <input value={inputValue2} onChange={handleChange2} placeholder='Теlegram' />
+              <button type='submit'>Забронировать место</button>
             </div>
             <ul>
               <li> - Теория</li>
@@ -357,25 +438,23 @@ const FAQ = () => {
     rows: [
       {
         title: 'Тяжело ли в Трейдинге?',
-        content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean vel turpis feugiat,
-              ultricies metus at, consequat velit.`,
+        content: `Трейдинг - это не только вызов, но и возможность для самосовершенствования и финансового роста. Это искусство, где каждый день приносит новые уроки и возможности. На этом пути мы сталкиваемся с вызовами и успехами, учимся принимать риски и принимать решения в условиях неопределенности. Но каждый шаг в этом направлении приносит нам опыт и позволяет нам развиваться как трейдерам и как личностям. Давайте продолжим двигаться вперед, стремясь к новым вершинам и познавая самих себя в процессе`,
       },
       {
         title: 'Когда я начну зарабатывать?',
-        content:
-          'Nunc maximus, magna at ultricies elementum, risus turpis vulputate quam, vitae convallis ex tortor sed dolor.',
+        content:'Начать зарабатывать в трейдинге зависит от многих факторов, включая ваш уровень знаний, опыт, стратегия торговли, терпение и умение управлять рисками. Некоторые трейдеры начинают зарабатывать уже через несколько месяцев, в то время как для других это может занять годы. Важно продолжать обучаться, тестировать свои стратегии и оставаться терпеливым. Со временем, при наличии усердия и умения, вы начнете видеть результаты своей работы.'
       },
       {
         title: 'Сколько я буду зарабатывать?',
-        content: `Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncus nunc, ac sagittis leo elit vel lorem. nec sagittis lacus.Mauris vulputate arcu sed massa euismod dignissim. `,
+        content: 'Как трейдер, ваш доход может значительно варьироваться в зависимости от множества факторов, таких как ваш уровень опыта, размер вашего капитала, выбранная стратегия торговли, рыночные условия и ваше умение управлять рисками.Некоторые трейдеры могут зарабатывать неплохие суммы, в то время как другие могут сталкиваться с убытками.Важно иметь реалистичные ожидания и стремиться к постепенному увеличению своего дохода с течением времени при постоянном развитии своих навыков и знаний.'
       },
       {
         title: 'Как идёт Обучение?',
-        content: `Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncus nunc, ac sagittis leo elit vel lorem.`,
+        content: 'Обучение проходит индивидуально. Материал предоставляется.Только качественный материал послужит успехом развития, начинающего трейдера. Обучение проходит через сервер Discord. 2 - 3 часа в день.'
       },
       {
         title: 'После истечении Обучения, доступ к материалам открыт?',
-        content: `Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncus nunc, ac sagittis leo elit vel lorem.`,
+        content: 'Абсолютно, Да. Доступ к материалам даётся безлимитно.'
       },
     ],
   };
