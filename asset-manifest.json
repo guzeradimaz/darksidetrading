@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/darksidetrading/static/css/main.54c0c604.css",
+    "main.js": "/darksidetrading/static/js/main.12f648cb.js",
+    "static/media/rain.gif": "/darksidetrading/static/media/rain.6008b81ba67bea241065.gif",
+    "static/media/crypto.gif": "/darksidetrading/static/media/crypto.a20bbb092a3c7542df00.gif",
+    "static/media/darkside.gif": "/darksidetrading/static/media/darkside.2ec42613bb8a8207d60e.gif",
+    "static/media/fog.gif": "/darksidetrading/static/media/fog.d8e380726f0a1df36bfd.gif",
+    "static/media/logo.png": "/darksidetrading/static/media/logo.44a78952487394e7351f.png",
+    "index.html": "/darksidetrading/index.html",
+    "main.54c0c604.css.map": "/darksidetrading/static/css/main.54c0c604.css.map",
+    "main.12f648cb.js.map": "/darksidetrading/static/js/main.12f648cb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.54c0c604.css",
+    "static/js/main.12f648cb.js"
+  ]
+}
